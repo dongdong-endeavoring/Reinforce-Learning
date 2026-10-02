@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "强化学习.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -204,6 +204,7 @@
   },
   "active": "56a7d84585ea8d9b",
   "lastOpenFiles": [
+    "强化学习.pdf",
     "image/部分可观测马尔可夫决策过程中的信念状态预览.png",
     "image/POMDP：部分可观测马尔可夫决策过程.png",
     "image/POMDP：部分可观测马尔可夫决策过程.png",
@@ -215,7 +216,6 @@
     "image/贝塔分布的概率密度函数PDF.png",
     "image/贝叶斯统计推断的输出.png",
     "image/统计推断：贝叶斯学派视角——典型框架.png",
-    "image/统计推断：频率学派视角——典型框架.png",
     "未命名.base"
   ]
 }
