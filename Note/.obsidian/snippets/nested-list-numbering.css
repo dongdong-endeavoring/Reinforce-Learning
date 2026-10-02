@@ -1,0 +1,129 @@
+/* ============================================
+   8 层嵌套有序列表编号
+   阅读模式下显示为：1.1.1.1.1.1.1.1 格式
+   ============================================ */
+
+/* 基础：移除所有 ol 默认样式 */
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+ol li {
+  position: relative;
+}
+
+/* ---------- 第 1 层 ---------- */
+ol:not(li ol) {
+  counter-reset: c1;
+}
+ol:not(li ol) > li {
+  counter-increment: c1;
+  padding-left: 2em;
+}
+ol:not(li ol) > li::before {
+  content: counter(c1) ". ";
+  position: absolute;
+  left: 0;
+  width: 2em;
+  text-align: right;
+  margin-left: -2em;
+}
+
+/* ---------- 第 2 层 ---------- */
+ol:not(li ol) > li > ol {
+  counter-reset: c2;
+}
+ol:not(li ol) > li > ol > li {
+  counter-increment: c2;
+  padding-left: 3em;
+}
+ol:not(li ol) > li > ol > li::before {
+  content: counter(c1) "." counter(c2) " ";
+  width: 3em;
+  margin-left: -3em;
+}
+
+/* ---------- 第 3 层 ---------- */
+ol:not(li ol) > li > ol > li > ol {
+  counter-reset: c3;
+}
+ol:not(li ol) > li > ol > li > ol > li {
+  counter-increment: c3;
+  padding-left: 4em;
+}
+ol:not(li ol) > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) " ";
+  width: 4em;
+  margin-left: -4em;
+}
+
+/* ---------- 第 4 层 ---------- */
+ol:not(li ol) > li > ol > li > ol > li > ol {
+  counter-reset: c4;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li {
+  counter-increment: c4;
+  padding-left: 5em;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) " ";
+  width: 5em;
+  margin-left: -5em;
+}
+
+/* ---------- 第 5 层 ---------- */
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol {
+  counter-reset: c5;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li {
+  counter-increment: c5;
+  padding-left: 6em;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) " ";
+  width: 6em;
+  margin-left: -6em;
+}
+
+/* ---------- 第 6 层 ---------- */
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol {
+  counter-reset: c6;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+  counter-increment: c6;
+  padding-left: 7em;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) "." counter(c6) " ";
+  width: 7em;
+  margin-left: -7em;
+}
+
+/* ---------- 第 7 层 ---------- */
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol {
+  counter-reset: c7;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+  counter-increment: c7;
+  padding-left: 8em;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) "." counter(c6) "." counter(c7) " ";
+  width: 8em;
+  margin-left: -8em;
+}
+
+/* ---------- 第 8 层 ---------- */
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol {
+  counter-reset: c8;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+  counter-increment: c8;
+  padding-left: 9em;
+}
+ol:not(li ol) > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li::before {
+  content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) "." counter(c6) "." counter(c7) "." counter(c8) " ";
+  width: 9em;
+  margin-left: -9em;
+}
